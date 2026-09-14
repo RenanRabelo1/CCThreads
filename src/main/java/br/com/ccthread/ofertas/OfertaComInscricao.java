@@ -5,7 +5,7 @@ import br.com.ccthread.inscricao.Inscricao;
 
 import java.util.List;
 
-public abstract class OfertaComInscricao extends OfertaBase {
+public abstract class OfertaComInscricao extends OfertaBase implements Inscrivel {
 
     protected List<Inscricao> inscricoes;
 

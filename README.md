@@ -1,4 +1,4 @@
-# Diagrama---CCThreads
+# Diagrama
 
 Veja o nosso diagrama: 
 

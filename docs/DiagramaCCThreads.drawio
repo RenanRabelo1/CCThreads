@@ -1,0 +1,172 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DER - Sistema Bancário" id="5LOEqrO4RL7qKfEYvEB5">
+    <mxGraphModel dx="3836" dy="3624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;&lt;interface&gt;&gt;&lt;br/&gt;&lt;b&gt;Visualizavel&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;&lt;i&gt;+ obterResumo(): String {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterMidias(): List&amp;lt;String&amp;gt; {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="130" width="250" x="519.9951799665181" y="319.9957142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;Projeto&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- titulo: String&lt;br/&gt;- resumo: String&lt;br/&gt;- midias: List&amp;lt;String&amp;gt;&lt;br/&gt;- origem: Oferta&lt;hr/&gt;&lt;i&gt;+ obterResumo(): String {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterMidias(): List&amp;lt;String&amp;gt; {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterOrigem(): Oferta {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="240" width="300" x="748.0951799665181" y="496.2857142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d79b00;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;VitrineDeProjetos&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- itens: List&amp;lt;Visualizavel&amp;gt;&lt;hr/&gt;&lt;i&gt;+ adicionar(item: Visualizavel): void {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ exibirTodos(): void {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="160" width="300" x="424.9951799665181" y="851.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt;&lt;br&gt;&lt;b&gt;CanalDeComunicacao&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;i&gt;+ enviar(msg: String, destino: Notificavel): void&amp;nbsp;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="320" x="1048.0951799665181" y="361.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;ServicoDeComunicacao&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- canal: CanalDeComunicacao&lt;hr/&gt;&lt;i&gt;+ notificar(destino: Notificavel, msg: String): void {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ publicarAviso(destinos: List&amp;lt;Notificavel&amp;gt;, msg: String): void {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="180" width="380" x="1219.9951799665182" y="1801.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;CanalEmail&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- servidorSmtp: String&lt;hr/&gt;&lt;i&gt;+ enviar(msg: String, destino: Notificavel): void {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="145" width="320" x="839.9951799665181" y="1059.9957142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;CanalPush&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- tokenServidor: String&lt;hr/&gt;&lt;i&gt;+ enviar(msg: String, destino: Notificavel): void {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="145" width="320" x="539.9951799665181" y="1249.9957142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;CanalSMS&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- gatewaySms: String&lt;hr/&gt;&lt;i&gt;+ enviar(msg: String, destino: Notificavel): void {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="145" width="320" x="549.9951799665181" y="1449.9957142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt;&lt;br&gt;&lt;b&gt;Notificavel&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;i&gt;+ receberAviso(msg: String): void&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ obterContato(): Contato&amp;nbsp;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="135" width="300" x="1489.9951799665182" y="-100.0042857142858" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;Aluno&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- matricula: String&lt;br/&gt;- nome: String&lt;br/&gt;- contato: Contato&lt;hr/&gt;&lt;i&gt;+ obterId(): String {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterNome(): String {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterContato(): Contato {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ receberAviso(msg: String): void {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="245" width="300" x="1299.9951799665182" y="766.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;Contato&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- email: String&lt;br/&gt;- telefone: String&lt;br/&gt;- tokenPush: String&lt;hr/&gt;&lt;i&gt;+ obterEmail(): String {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterTelefone(): String {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterTokenPush(): String {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="200" width="300" x="1459.9951799665182" y="1308.7857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt;&lt;br&gt;&lt;b&gt;RepositorioDeInscricao&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;i&gt;+ salvar(inscricao: Inscricao): void&amp;nbsp;&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ buscarPorOferta(oferta: Oferta): List&amp;lt;Inscricao&amp;gt;&amp;nbsp;&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ existePor(participante: Participante, oferta: Oferta): boolean&amp;nbsp;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="175" width="400" x="2259.995179966518" y="389.9957142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;MySQLRepositorioDeInscricao&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- conexao: Connection&lt;hr/&gt;&lt;i&gt;+ salvar(inscricao: Inscricao): void {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ buscarPorOferta(oferta: Oferta): List&amp;lt;Inscricao&amp;gt; {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ existePor(participante: Participante, oferta: Oferta): boolean {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="180" width="400" x="1719.9951799665182" y="399.99571428571426" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;Inscricao&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- participante: Participante&lt;br/&gt;- oferta: Oferta&lt;br/&gt;- dataHora: LocalDateTime&lt;br/&gt;- status: StatusInscricao&lt;hr/&gt;&lt;i&gt;+ obterParticipante(): Participante {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterOferta(): Oferta {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ estaConfirmada(): boolean {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ cancelar(): void {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="245" width="340" x="2079.995179966518" y="719.9957142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt;&lt;br&gt;&lt;b&gt;Inscrivel&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;i&gt;+ inscrever(participante: Participante): Inscricao&amp;nbsp;&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ temVagaDisponivel(): boolean&amp;nbsp;&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ obterInscricoes(): List&amp;lt;Inscricao&amp;gt;&amp;nbsp;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="165" width="360" x="1689.9951799665182" y="619.9957142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;ServicoDeInscricao&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- repositorio: RepositorioDeInscricao&lt;br/&gt;- notificador: ServicoDeComunicacao&lt;hr/&gt;&lt;i&gt;+ registrar(participante: Participante, oferta: Inscrivel): Inscricao {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="160" width="400" x="1619.9951799665182" y="949.9957142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;&lt;enumeration&gt;&gt;&lt;br/&gt;&lt;b&gt;StatusInscricao&lt;/b&gt;&lt;/div&gt;&lt;hr/&gt;CONFIRMADA&lt;br/&gt;EM_ESPERA&lt;br/&gt;CANCELADA" vertex="1">
+          <mxGeometry height="135" width="240" x="3049.995179966518" y="1011.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt;&lt;br&gt;&lt;b&gt;Oferta&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;i&gt;+ obterTitulo(): String&amp;nbsp;&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ obterDataEvento(): LocalDate&amp;nbsp;&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ aceitaInscricao(): boolean&amp;nbsp;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="160" width="300" x="3189.995179966518" y="89.99571428571423" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;OfertaBase&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;# titulo: String&lt;br/&gt;# dataEvento: LocalDate&lt;hr/&gt;&lt;i&gt;+ obterTitulo(): String {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterDataEvento(): LocalDate {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ aceitaInscricao(): boolean {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="190" width="320" x="2889.995179966518" y="329.9957142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;OfertaComInscricao&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;# inscricoes: List&amp;lt;Inscricao&amp;gt;&lt;hr/&gt;&lt;i&gt;+ inscrever(participante: Participante): Inscricao {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ obterInscricoes(): List&amp;lt;Inscricao&amp;gt; {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ aceitaInscricao(): boolean {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ temVagaDisponivel(): boolean {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="215" width="380" x="2628.095179966518" y="599.9957142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;GrupoDeEstudo&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- encontrosSemanais: int&lt;hr/&gt;&lt;i&gt;+ temVagaDisponivel(): boolean {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="135" width="310" x="2369.995179966518" y="1181.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;Hackathon&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- vagas: int&lt;hr/&gt;&lt;i&gt;+ temVagaDisponivel(): boolean {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="135" width="280" x="3039.995179966518" y="1169.9957142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;Nucleo&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- area: String&lt;hr/&gt;&lt;i&gt;+ obterArea(): String {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="135" width="280" x="3029.995179966518" y="1341.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt;&lt;br&gt;&lt;b&gt;RepositorioDeOfertas&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;i&gt;+ salvar(oferta: Oferta): void&amp;nbsp;&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ listar(): List&amp;lt;Oferta&amp;gt;&amp;nbsp;&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ buscarPorTitulo(titulo: String): Optional&amp;lt;Oferta&amp;gt;&amp;nbsp;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="165" width="370" x="2589.995179966518" y="1331.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;RepositorioEmMemoriaDeOfertas&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- ofertas: List&amp;lt;Oferta&amp;gt;&lt;hr/&gt;&lt;i&gt;+ salvar(oferta: Oferta): void {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ listar(): List&amp;lt;Oferta&amp;gt; {abstract}&lt;/i&gt;&lt;br/&gt;&lt;i&gt;+ buscarPorTitulo(titulo: String): Optional&amp;lt;Oferta&amp;gt; {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="185" width="410" x="2289.995179966518" y="1616.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;CatalogadorDeOfertas&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- repositorio: RepositorioDeOfertas&lt;hr/&gt;&lt;i&gt;+ catalogar(oferta: Oferta): void {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="145" width="340" x="3109.995179966518" y="1601.2857142857142" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&lt;i&gt;&lt;b&gt;ListadorDeOfertas&lt;/b&gt;&lt;/i&gt; {abstract}&lt;/div&gt;&lt;hr/&gt;- repositorio: RepositorioDeOfertas&lt;hr/&gt;&lt;i&gt;+ listarOfertas(): List&amp;lt;Oferta&amp;gt; {abstract}&lt;/i&gt;" vertex="1">
+          <mxGeometry height="145" width="340" x="3109.995179966518" y="1939.9957142857143" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-29" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-30" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-19" value="origem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-31" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-1" value="itens">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-32" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-4" value="canal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-33" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-34" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-35" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-36" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-37" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-38" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-12" value="contato">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-39" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-40" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-10" value="participante">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-41" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-19" value="oferta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-42" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-18" value="status">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-43" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-13" value="repositorio">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-44" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-5" value="notificador">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-45" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-46" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-47" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-48" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-49" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-50" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=block;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-51" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-25" value="repositorio">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-52" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-25" value="repositorio">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-53" edge="1" parent="1" source="9yT7fbUfjTM-X-crZ99p-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" target="9yT7fbUfjTM-X-crZ99p-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1048" y="616" as="sourcePoint" />
+            <mxPoint x="2338" y="441" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9yT7fbUfjTM-X-crZ99p-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" value="&lt;div style=&quot;text-align:center&quot;&gt;&amp;lt;&amp;gt;&lt;br&gt;&lt;b&gt;Participante&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;i&gt;+ obterId(): String&amp;nbsp;&lt;/i&gt;&lt;br&gt;&lt;i&gt;+ obterNome(): String&amp;nbsp;&lt;/i&gt;" vertex="1">
+          <mxGeometry height="130" width="260" x="1518.0951799665181" y="179.99571428571423" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

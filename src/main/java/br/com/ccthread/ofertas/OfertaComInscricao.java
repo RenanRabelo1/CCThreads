@@ -2,6 +2,7 @@ package br.com.ccthread.ofertas;
 
 import br.com.ccthread.dominio.Participante;
 import br.com.ccthread.inscricao.Inscricao;
+import br.com.ccthread.inscricao.Inscrivel;
 
 import java.util.List;
 
